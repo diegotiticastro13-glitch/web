@@ -1,5 +1,5 @@
 <h2>Sistema de Registro</h2>
 <ul>
-    <form action="registro_usuarios.php" method="POST">
+    <li><a href="registro_usuarios.php">Registrar Usuario</a></li>
 </ul>
 
