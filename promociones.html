@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FARMACIAS SIMILARES</title>
+  <style>
+    :root {
+      --morado: #2cabf5;
+      --blanco: #ffffff;
+      --negro: #000000;
+      --gris-texto: #555555;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+    }
+
+    body {
+      background-color: var(--blanco);
+      color: var(--negro);
+    }
+
+    header {
+      background-color: var(--morado);
+      color: var(--blanco);
+      padding: 20px;
+      text-align: center;
+    }
+
+    section {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: var(--morado);
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--morado);
+      padding-bottom: 10px;
+    }
+
+    .promociones-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .producto {
+      border: 1px solid var(--morado);
+      padding: 15px;
+      text-align: center;
+      border-radius: 10px;
+      background: #fafafa;
+      position: relative;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .producto:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(106, 13, 173, 0.3);
+    }
+
+    .producto img {
+      max-width: 100%;
+      border-radius: 10px;
+      height: 160px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .precio-original {
+      text-decoration: line-through;
+      color: var(--gris-texto);
+      font-size: 0.9rem;
+      margin-right: 10px;
+    }
+
+    .precio-descuento {
+      color: var(--rojo-descuento);
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .etiqueta-descuento {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: var(--verde-descuento);
+      color: var(--blanco);
+      font-weight: bold;
+      font-size: 0.9rem;
+      padding: 5px 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+    .volver-btn {
+      background-color: var(--morado);
+      color: var(--blanco);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .volver-btn:hover {
+      background-color: #5a0099;
+    }
+
+    footer {
+      background-color: var(--negro);
+      color: var(--blanco);
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FARMACIA SIMILARES</h1>
+    <p>Lo mismo pero mas barato </p>
+  </header>
+
+  <section>
+    <h2>Ofertas Especiales</h2>
+    <div class="promociones-grid">
+      <div class="producto">
+        <h3>medicamento</h3>
+        <p>al comprar con una receta se le da el 10%.</p>
+      </div>
+
+      <div class="producto">
+        <h3>doctor</h3>
+        <p>al venir a revisarse con nuestro especialista usted recibe el 
+          medicamento con el 50%.</p>
+      </div>
+
+      <div class="producto">
+        <h3>tarjeta </h3>
+        <p>resiva nuestra tarjeta de credito y resivira ofertas especiales.</p>
+      </div>
+
+      <div class="producto">
+        <h3>sucursales</h3>
+        <p>todas nuestras sucursales estaran abiertas 24/7 para usted.</p>
+      </div>
+
+      <div class="producto">
+        <h3>Ofertas especiales en seguros</h3>
+        <p>usted puede resivir un seguro con nosotros.</p>
+      </div>
+
+      <div class="producto">
+        <h3>Servicios exclusivos</h3>
+        <p>con este servicio puede agender cita con el doctor en turno o pedir algun medicamento .</p>
+      </div>
+    </div>
+    <a href="Prueba2.html" class="volver-btn">← Volver al Inicio</a>
+  </section>
+
+  <footer>
+    <p>&copy; Bank Company el lugar mas confiable para tu dinero </p>
+  </footer>
+</body>
+</html>

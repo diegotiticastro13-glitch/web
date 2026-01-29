@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FARMACIA SIMILARES</title>
+  <style>
+    :root {
+      --morado: #ffffff;
+      --morado-claro: #ffffff;
+      --blanco: #000000;
+      --negro: #ffffff;
+      --gris-claro: #ffffff;
+      --gris-texto: #555555;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ffffff 0%, #3f6ce7 100%);
+      color: var(--negro);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--morado);
+      color: var(--blanco);
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: var(--negro);
+    }
+
+    nav a {
+      color: var(--blanco);
+      text-decoration: none;
+      padding: 15px 25px;
+      display: inline-block;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+
+    nav a:hover, nav a.active {
+      background-color: var(--morado);
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    h2 {
+      color: var(--morado);
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--morado);
+      padding-bottom: 10px;
+    }
+
+    .bienvenida {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .btn-catalogo {
+      background-color: var(--morado);
+      color: var(--blanco);
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      display: inline-block;
+      margin-bottom: 40px;
+    }
+
+    .btn-catalogo:hover {
+      background-color: #fbff00;
+    }
+
+    .slider-container {
+      position: relative;
+      margin: 0 auto 50px;
+      width: 600px;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      background-color: var(--blanco);
+      z-index: 1000;
+    }
+
+    .slider-images {
+      display: flex;
+      flex-direction: row;
+      transition: transform 1.5s ease-in-out;
+      gap: 0.5rem;
+    }
+
+    .slider-images img {
+      width: 600px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .slider-container {
+        width: 100%;
+        height: 200px;
+      }
+      .slider-images img {
+        width: 100%;
+        height: 200px;
+      }
+    }
+
+    #destacados {
+      margin-top: 50px;
+    }
+
+    .productos-destacados {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .productos-destacados article {
+      border: 1px solid var(--morado);
+      border-radius: 10px;
+      padding: 15px;
+      max-width: 250px;
+      text-align: center;
+      background: #000000;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .productos-destacados article:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 132, 255, 0.3);
+    }
+
+    .productos-destacados img {
+      width: 100%;
+      border-radius: 10px;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .productos-destacados h3 {
+      margin: 15px 0 10px;
+      color: var(--morado);
+    }
+
+    #testimonios {
+      margin-top: 50px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-style: italic;
+      color: #444;
+    }
+
+    #testimonios blockquote {
+      border-left: 5px solid var(--morado);
+      padding-left: 15px;
+      margin-bottom: 25px;
+      font-size: 1.1rem;
+      background: #ffe600;
+      border-radius: 5px;
+      padding: 15px 20px;
+    }
+
+    #testimonios footer {
+      margin-top: 10px;
+      font-style: normal;
+      font-weight: bold;
+      color: var(--morado);
+    }
+
+    #sobre-nosotros {
+      margin-top: 50px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    footer {
+      background-color: var(--negro);
+      color: var(--blanco);
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>FARMACIA SIMILARES</h1>
+  <img src="Similares (1).png" alt="BANK COMPANY" style="width: 200px; margin-top: 10px;" />
+  <p>Su salud es nuestra prioridad  </p>
+</header>
+
+  <nav>
+    <a href="Prueba2.html" class="active">Inicio</a>
+    <a href="index.html">Login</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="sucursales.html">Sucursales</a>
+    <a href="promociones.html">Promociones</a>
+  </nav>
+
+  <section id="inicio">
+    <h2>Bienvenidos a farmacias similares </h2>
+    <p class="bienvenida">
+    Bienvenidos al lugar donde se vende lo mismo pero mas barato <br/>
+    </p>
+   
+
+    <section id="destacados">
+      <h2>medicinas ofertas</h2>
+      <div class="productos-destacados">
+        <article>
+          <img src="798.png" alt="cheesecake de Fresa" />
+          <h3>omeprazol</h3>
+        </article>
+        <article>
+          <img src="images (1).jpeg" alt="Tarta de Limón" />
+          <h3>probacilus</h3>
+        </article>
+        <article>
+          <img src="images.jpeg" alt="Red Velvet" />
+          <h3>simiwell </h3>
+        </article>
+      </div>
+    </section>
+
+  <section id="testimonios">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <blockquote>
+      <p>"el omeprazol me salio mas barato y mejor calidad"</p>
+      <footer> Fernando Sanchez</footer>
+    </blockquote>
+    <blockquote>
+      <p>"la ofertas de esta farmacia son una locura "</p>
+      <footer> Rojas Joel</footer>
+    </blockquote>
+  </section>
+
+  <section id="sobre-nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>
+      En nuestra farmacia buscamos que encuentres todo y mas barato por
+      que la salud no es privilegio de nadie.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; farmacias similares a tu disponibilidad</p>
+    <p>&copy; 5-v / Cbtis128 / Castro Morales Diego</p>
+  </footer>
+
+<script>
+  const slider = document.getElementById('slider');
+  let position = 0;
+
+  function slideContinuous() {
+    position += 3;
+    if (position >= slider.scrollWidth / 2) {
+      position = 0;
+    }
+    slider.style.transform = `translateX(-${position}px)`;
+    requestAnimationFrame(slideContinuous);
+  }
+
+  requestAnimationFrame(slideContinuous);
+</script>
+</body>
+</html>

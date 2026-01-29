@@ -1,0 +1,18 @@
+<?php
+include("db.php");
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+$sql = "SELECT * FROM usuarios WHERE username = '$username' AND password = '$password'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo "<h2>Bienvenido, $username</h2>";
+} else {
+    echo "<h2>Usuario o contraseña incorrectos</h2>";
+}
+header("Location: index.php");
+    exit;
+
+?>
